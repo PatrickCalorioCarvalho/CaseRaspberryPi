@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /home/Patrick/gif_display.py
+ExecStart=/usr/bin/python3 /home/Patrick/actions-runner/_work/CaseRaspberryPi/CaseRaspberryPi/gif_display.py
 Restart=on-abort
 
 [Install]
