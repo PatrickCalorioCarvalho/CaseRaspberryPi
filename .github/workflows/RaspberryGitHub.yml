@@ -1,0 +1,27 @@
+name: RaspberryGitHub
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  Deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Stop Service LED_RGB
+        run: sudo systemctl stop LED_RGB
+        
+      - name: Stop Service GIF_DISPLAY
+        run: sudo systemctl stop GIF_DISPLAY
+
+      - name: Atualizar Codigo
+        uses: actions/checkout@v4
+
+      - name: Instalar Dependencias Python
+        run: pip install -r requirements.txt
+
+      - name: Start Service LED_RGB
+        run: sudo systemctl start LED_RGB
+
+      - name: Start Service GIF_DISPLAY
+        run: sudo systemctl start GIF_DISPLAY

@@ -1,0 +1,11 @@
+[Unit]
+Description=led_rgn
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/Patrick/led_rgn.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=GIF_DISPLAY
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/Patrick/gif_display.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
