@@ -5,7 +5,7 @@ from PIL import Image
 import st7735
 
 
-image_file = "/home/Patrick/actions-runner/_work/CaseRaspberryPi/CaseRaspberryPi/background.gif"
+image_file = "/home/patrick/actions-runner/_work/CaseRaspberryPi/CaseRaspberryPi/background.gif"
 
 
 disp = st7735.ST7735(port=0, cs=0, dc=24, backlight=None, rst=25, width=80, height=160, rotation=90,spi_speed_hz=4000000)
